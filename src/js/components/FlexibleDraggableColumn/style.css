@@ -1,0 +1,10 @@
+.flexibleBox{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  align-items: stretch;
+  height: 100%;
+}
+
+.flexibleChild{
+}

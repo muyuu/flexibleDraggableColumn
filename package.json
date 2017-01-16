@@ -1,0 +1,35 @@
+{
+  "name": "electronTutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server -d --progress --colors --hot --display-error-details",
+    "build": "webpack",
+    "watch": "webpack --progress --colors --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "postcss-import": "^9.0.0",
+    "postcss-loader": "^1.2.0",
+    "precss": "^1.4.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0"
+  }
+}
