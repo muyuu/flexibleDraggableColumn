@@ -1,4 +1,6 @@
 import React, { propTypes, cloneElement} from "react";
+import EventEmitter from 'events';
+
 require("./style.css");
 
 export default class FlexibleBox extends React.Component {
@@ -10,20 +12,29 @@ export default class FlexibleBox extends React.Component {
       width: [],
     };
 
+    this.emitter = new EventEmitter;
+
     this.children = this.props.children;
     this.setItemLength(this.children);
     this.setWidth(this.children);
+
+    this.emitter.on("drag", (param)=>{
+      const grab = "a";
+      this.setState({
+        width: []
+      });
+    });
   }
 
   setItemLength(children){
-    this.setState({
-      itemLength: children.lnegth
-    });
+    // this.setState({
+    //   itemLength: children.lnegth
+    // });
   }
 
   setWidth(children){
     let width = children.map(v=> 100 / this.state.itemLength);
-    this.setState({width});
+    // this.setState({width});
   }
 
   getChildren(){
